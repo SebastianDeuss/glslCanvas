@@ -1710,9 +1710,10 @@ function loadAllGlslCanvas() {
         }
     }
 }
-
-window.addEventListener('load', function () {
-    loadAllGlslCanvas();
-});
+if (typeof window !== 'undefined') {
+    window.addEventListener('load', function () {
+        loadAllGlslCanvas();
+    });
+}
 
 export default GlslCanvas;
